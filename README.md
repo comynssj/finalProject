@@ -8,7 +8,7 @@ Storyboard :
 
 Landing Page/After hitting the plus button below your bottom category
 
-![storyboard image 1](com.finalProject/layout1.png)
+![storyboard image 1](https://finalProject.github.com/images/layout1.png)
 
 The view of the category with the ability to edit the name. It displays the how many different items have been entered along with how many total there are.
 
