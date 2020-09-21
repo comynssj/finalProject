@@ -8,19 +8,19 @@ Storyboard :
 
 Landing Page/After hitting the plus button below your bottom category
 
-[Images](https://github.com/comynssj/finalProject/issues/7)
+[Layout 1](https://github.com/comynssj/finalProject/issues/7)
 
 The view of the category with the ability to edit the name. It displays the how many different items have been entered along with how many total there are.
 
-[Images](https://github.com/comynssj/finalProject/issues/7)
+[Layout 2](https://github.com/comynssj/finalProject/issues/7)
 	
 After the user tries to add a new item under Masks
 
-[Images](https://github.com/comynssj/finalProject/issues/7)
+[Layout 3](https://github.com/comynssj/finalProject/issues/7)
 	
 After opening a dropdown and selecting an item from the list
 
-[Images](https://github.com/comynssj/finalProject/issues/7)
+[Layout 4](https://github.com/comynssj/finalProject/issues/7)
 
 ## Requirements
 
@@ -45,6 +45,7 @@ After opening a dropdown and selecting an item from the list
 
 ## Class Diagram 
 
+[Class Diagram](https://github.com/comynssj/finalProject/issues/7)
 
 -com.easyinventory.ui
 
