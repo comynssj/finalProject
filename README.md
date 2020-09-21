@@ -5,9 +5,10 @@ EasyInventory allows a user to add a category to the inventory database and then
 
 ## Storyboard
 Storyboard :
-	
+
 Landing Page/After hitting the plus button below your bottom category
 
+![storyboard image 1]()
 
 The view of the category with the ability to edit the name. It displays the how many different items have been entered along with how many total there are.
 
