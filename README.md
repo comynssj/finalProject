@@ -87,7 +87,15 @@ After opening a dropdown and selecting an item from the list
   }
 }
 
+## Scrum Roles
 
+UI Specialist: Spencer Comyns
+Business Logic Persistence Specialist: Anthony Nagal
+Product Owner/Scrum Master/DevOps/GitHub Administrator: Spencer Comyns
+
+## Team Standup
+
+Will be conducted every Wednesday at 4pm on Microsoft Teams
 
 
 
