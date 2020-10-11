@@ -43,7 +43,7 @@ public class EasyInventoryController {
     @RequestMapping(value="/category/newcategory", method = RequestMethod.POST)
     public List<Category> addCategory(@RequestBody Category category){
         categoryRepository.saveAndFlush(category);
-        List<Category> categoryList = new ArrayList<>();
+        List<Category> categoryList;
         categoryList = categoryRepository.findAllByOrderByCategoryIdAsc();
         return categoryList;
     }

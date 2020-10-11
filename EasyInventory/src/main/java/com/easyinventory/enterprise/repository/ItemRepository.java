@@ -17,6 +17,6 @@ import java.util.List;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Integer> {
     //This method will sort all the items by their categoryId so that when
-    //new items are added they will stll be grouped appropriately in the JSON
+    //new items are added they will still be grouped appropriately in the JSON
     List<Item> findAllByOrderByCategoryIdAsc();
 }
