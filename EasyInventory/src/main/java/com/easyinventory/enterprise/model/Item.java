@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 
+
 /**
  * Author: Anthony Nagal
  *
@@ -11,7 +12,8 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="item_table")
-public class Item {
+
+public @Data class Item {
 
     @Id
     @GeneratedValue

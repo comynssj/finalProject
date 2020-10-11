@@ -17,6 +17,9 @@ import static org.hibernate.loader.Loader.SELECT;
  */
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Integer> {
-    //Ensures the categories are sorted correctly, future-proofing but most-likely redundant.
+    /**
+     * Ensures the categories are sorted correctly, future-proofing but most-likely redundant.
+     * @return
+     */
     List<Category> findAllByOrderByCategoryIdAsc();
 }
