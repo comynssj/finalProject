@@ -8,6 +8,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="category_table")
+
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

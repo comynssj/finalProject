@@ -33,13 +33,20 @@ public class EasyInventoryController {
 
     //Endpoints for the categories
 
-    //Retrieves all the categories from the database
+    /**
+     * Retrieves all the categories from the database
+     * @return
+     */
     @RequestMapping(value="/category/all", method = RequestMethod.GET)
     public List<Category> getAllCategories(){
         return categoryRepository.findAllByOrderByCategoryIdAsc();
     }
 
-    //Adds a new value to the category table
+    /**
+     * Adds a new value to the category table
+     * @param category
+     * @return
+     */
     @RequestMapping(value="/category/newcategory", method = RequestMethod.POST)
     public List<Category> addCategory(@RequestBody Category category){
         categoryRepository.saveAndFlush(category);
@@ -48,7 +55,11 @@ public class EasyInventoryController {
         return categoryList;
     }
 
-    //Deletes a category from the table
+    /**
+     * Deletes a category from the table
+     * @param category
+     * @return
+     */
     @RequestMapping(value="/category/deletecategory", method = RequestMethod.DELETE)
     public List<Category> deleteCategory(@RequestBody Category category){
         categoryRepository.delete(category);
@@ -61,13 +72,20 @@ public class EasyInventoryController {
 
     //Endpoints for the Items
 
-    //Retrieves all the items from the database
+    /**
+     * Retrieves all the items from the database
+     * @return
+     */
     @RequestMapping(value="/item/all", method = RequestMethod.GET)
     public List<Item> getAllItems(){
         return itemRepository.findAllByOrderByCategoryIdAsc();
     }
 
-    //Adds a new value to the item table
+    /**
+     * Adds a new value to the item table
+     * @param item
+     * @return
+     */
     @RequestMapping(value="/item/newitem", method = RequestMethod.POST)
     public List<Item> addItem(@RequestBody Item item){
         itemRepository.saveAndFlush(item);
@@ -76,7 +94,11 @@ public class EasyInventoryController {
         return itemList;
     }
 
-    //Deletes a new value to the item table
+    /**
+     * Deletes a new value to the item table
+     * @param item
+     * @return
+     */
     @RequestMapping(value="/item/newitem", method = RequestMethod.DELETE)
     public List<Item> deleteItem(@RequestBody Item item){
         itemRepository.delete(item);
