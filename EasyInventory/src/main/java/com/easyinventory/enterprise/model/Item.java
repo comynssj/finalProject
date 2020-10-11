@@ -15,19 +15,23 @@ public class Item {
 
     @Id
     @GeneratedValue
-    @Column(name="item_id")
+    @Column(name="Id")
     private Integer itemId;
 
-    @Column(name="category_id")
+    @Column(name="Id")
     private Integer categoryId;
 
-    @Column(name="item_name")
+    @Column(name="Name")
+    //or even taking out item as we already know its an item table unless you will be sharing this to other parts of the program outside of the DB
+    //unless the column names have been set in another class
+    
     private String itemName;
-
-    @Column(name="item_quantity")
+//can leave this alone here since the items will be pulled most likely in to other methods
+    @Column(name="Quantity")
+    
     private Integer itemQuantity;
 
-    @Column(name="item_notes")
+    @Column(name="Notes g f f")
     private String itemNotes;
 
     public Item(){}
