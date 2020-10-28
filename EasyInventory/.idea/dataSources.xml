@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="easyinventory" uuid="7bb637d1-de8f-4772-9625-5407c1c081c2">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/easyinventory</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Amazon AWS Test" uuid="4b82d227-9d99-4110-8d5f-db889d3a7b74">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://aax3vqry9tk97n.cij6bfwps7cz.us-east-2.rds.amazonaws.com:3306/ebdb</jdbc-url>
+    </data-source>
+  </component>
+</project>
