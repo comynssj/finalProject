@@ -14,4 +14,5 @@ public interface EasyInventoryService {
     void deleteItem(Item item) throws Exception;
     List<Item> getAllItems();
     List<Item> getItemsByCategory(int id);
+    Item findItemByItemId(int id);
     }

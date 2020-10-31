@@ -4,6 +4,7 @@ import com.easyinventory.enterprise.dao.CategoryRepository;
 import com.easyinventory.enterprise.dao.ItemRepository;
 import com.easyinventory.enterprise.dto.Category;
 import com.easyinventory.enterprise.dto.Item;
+import javassist.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -96,4 +97,10 @@ public class EasyInventoryServiceIMPL implements EasyInventoryService{
     public List<Item> getItemsByCategory(int id) {
         return itemRepository.findItemsByCategoryId(id);
     }
+
+    /**
+     * @return item by item id
+     */
+    @Override
+    public Item findItemByItemId(int id){ return itemRepository.findItemByItemId(id); }
 }

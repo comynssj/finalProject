@@ -15,6 +15,7 @@ import java.util.List;
 public interface ItemRepository extends JpaRepository<Item, Integer> {
     List<Item> findAll();
     List<Item> findItemsByCategoryId(int categoryID);
+    Item findItemByItemId(int itemId);
     Item save(Item item);
     void deleteByItemIdAndAndCategoryId(int itemID, int categoryID);
 }
