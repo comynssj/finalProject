@@ -40,7 +40,7 @@ public class EasyInventoryServiceIMPL implements EasyInventoryService{
     @Override
     public void deleteCategory(Category category) throws Exception {
         int categoryId = category.getCategoryId();
-        categoryRepository.delete(category);
+        categoryRepository.deleteCategoryByCategoryId(categoryId);
     }
 
     /**
@@ -88,5 +88,12 @@ public class EasyInventoryServiceIMPL implements EasyInventoryService{
     @Override
     public List<Item> getAllItems() {
         return itemRepository.findAll();
+    }
+    /**
+     * @return list of all items
+     */
+    @Override
+    public List<Item> getItemsByCategory(int id) {
+        return itemRepository.findItemsByCategoryId(id);
     }
 }

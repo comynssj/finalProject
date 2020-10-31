@@ -13,4 +13,5 @@ public interface EasyInventoryService {
     Item saveItem(Item item) throws Exception;
     void deleteItem(Item item) throws Exception;
     List<Item> getAllItems();
+    List<Item> getItemsByCategory(int id);
     }

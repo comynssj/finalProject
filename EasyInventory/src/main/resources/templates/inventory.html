@@ -8,8 +8,12 @@
 <body>
 <div style="display:flex">
     <div id="categoryPane">
-        <p>Categories</p>
-        <p> This is where the list of categories will be.</p>
+        <h4>Categories</h4>
+        <div class="list-group" th:each="category : ${categories}">
+            <a href="#" class="List-group-item list-group-item-action">
+                <p th:text="${category}"></p>
+            </a>
+        </div>
     </div>
     <div id="mainDisplay"> lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</div>
 </div>

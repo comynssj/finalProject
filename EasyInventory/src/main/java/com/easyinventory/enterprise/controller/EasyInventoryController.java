@@ -1,36 +1,36 @@
 package com.easyinventory.enterprise.controller;
+
 import com.easyinventory.enterprise.dto.Category;
 import com.easyinventory.enterprise.dto.Item;
 import com.easyinventory.enterprise.service.EasyInventoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 /**
- * Author: Anthony Nagal
+ * Anthony Nagal
  *
- * This class is the EasyInventoryController, It will control
- * the two repositories where the data will be gotten from/manipulated
- *
+ * This controller will handle calls that are not directly needed or might be needed from the HTML.
  */
 @RestController
-@RequestMapping("/service")
 public class EasyInventoryController {
 
     @Autowired
     EasyInventoryService easyInventoryService;
-
     //Endpoints for the categories
 
     //Retrieves all the categories from the database
     @RequestMapping(value="/category/all", method = RequestMethod.GET)
-    public List<Category> getAllCategories(){
+    public List<Category> getAllCategories(Model model){
         return easyInventoryService.getAllCategories();
     }
 
     @RequestMapping(value="/category/{id}", method = RequestMethod.GET)
-    public Category getAllCategories(@RequestParam int id) throws Exception {
+    public Category getCategoryById(@PathVariable int id, Model model) throws Exception {
+        Category category = easyInventoryService.getCategoryByCategoryId(id);
+        model.addAttribute("singleCategory", category);
         return easyInventoryService.getCategoryByCategoryId(id);
     }
 
@@ -51,7 +51,15 @@ public class EasyInventoryController {
     //Retrieves all the items from the database
     @RequestMapping(value="/item/all", method = RequestMethod.GET)
     public List<Item> getAllItems(){
-        return easyInventoryService.getAllItems();
+        List<Item> itemList = easyInventoryService.getAllItems();
+        return itemList;
+    }
+
+    //Retrieves all the items from the database by category id
+    @RequestMapping(value="/item/{id}", method = RequestMethod.GET)
+    public List<Item> getItemsByCategory(@PathVariable int id){
+        List<Item> itemList = easyInventoryService.getItemsByCategory(id);
+        return itemList;
     }
 
     //Adds a new value to the item table

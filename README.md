@@ -10,7 +10,7 @@ Landing Page/After hitting the plus button below your bottom category
 
 [Layout 1](https://github.com/comynssj/finalProject/issues/7)
 
-The view of the category with the ability to edit the name. It displays the how many different items have been entered along with how many total there are.
+The view of the category with the ability to edit the name. It displays how many different items have been entered along with how many total there are.
 
 [Layout 2](https://github.com/comynssj/finalProject/issues/7)
 	

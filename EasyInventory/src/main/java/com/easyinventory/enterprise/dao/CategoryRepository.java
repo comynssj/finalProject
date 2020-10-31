@@ -6,10 +6,14 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+/**
+ * Anthony Nagal
+ * This repository handles the categories
+ */
 @Repository
 public interface CategoryRepository extends JpaRepository<Category, Integer> {
     List<Category> findAll();
     Category getCategoryByCategoryId(int id);
     Category save(Category category);
-    void deleteByCategoryId(int id);
+    void deleteCategoryByCategoryId(int id);
 }
