@@ -123,16 +123,16 @@ http://localhost:8080/category/{id}
 *#post*
 http://localhost:8080/category/newcategory
 	*{
-	categoryId: int,
-	categoryName: ""
+	"categoryId": int,
+	"categoryName": ""
 	}*
 
 -Deletes a category 
 *#delete*
 http://localhost:8080/category/deletecategory
 	*{
-	categoryId: int,
-	categoryName: ""
+	"categoryId": int,
+	"categoryName": ""
 	}*
 
 -Returns all items 
@@ -151,22 +151,22 @@ http://localhost:8080/item/item/{id}
 *#post*
 http://localhost:8080/item/newitem
 	*{
-	itemId: int,
-	categoryId: int,
-	itemName: "",
-	itemQuantity: int,
-	itemNotes: ""
+	"itemId": int,
+	"categoryId": int,
+	"itemName": "",
+	"itemQuantity": int,
+	"itemNotes": ""
 	}*
 
 -deletes an item 
 *#delete*
 http://localhost:8080/item/deleteitem
 	*{
-	itemId: int,
-	categoryId: int,
-	itemName: "",
-	itemQuantity: int,
-	itemNotes: ""
+	"itemId": int,
+	"categoryId": int,
+	"itemName": "",
+	"itemQuantity": int,
+	"itemNotes": ""
 	}*
 
 
