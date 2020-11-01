@@ -112,15 +112,15 @@ https://www.postman.com/downloads/
 Run the application.
 
 -Returns all categories 
-	*get*
-	http://localhost:8080/category/all
+*#get*
+http://localhost:8080/category/all
 
 -Returns category by Id 
-*get*
+*#get*
 http://localhost:8080/category/{id}
 
 -Adds a new category 
-*post*
+*#post*
 http://localhost:8080/category/newcategory
 	*{
 	categoryId: int,
@@ -128,7 +128,7 @@ http://localhost:8080/category/newcategory
 	}*
 
 -Deletes a category 
-*delete*
+*#delete*
 http://localhost:8080/category/deletecategory
 	*{
 	categoryId: int,
@@ -136,19 +136,19 @@ http://localhost:8080/category/deletecategory
 	}*
 
 -Returns all items 
-*get*
+*#get*
 http://localhost:8080/item/all
 
 -Returns items by category id 
-*get*
+*#get*
 http://localhost:8080/item/{id}
 
 -Returns item by item id 
-*get*
+*#get*
 http://localhost:8080/item/item/{id}
 
 -Adds a new item 
-*post*
+*#post*
 http://localhost:8080/item/newitem
 	*{
 	itemId: int,
@@ -159,7 +159,7 @@ http://localhost:8080/item/newitem
 	}*
 
 -deletes an item 
-*delete*
+*#delete*
 http://localhost:8080/item/deleteitem
 	*{
 	itemId: int,
