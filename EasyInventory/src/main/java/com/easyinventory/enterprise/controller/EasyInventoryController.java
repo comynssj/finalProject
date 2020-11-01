@@ -77,7 +77,7 @@ public class EasyInventoryController {
     }
 
     //Deletes a new value to the item table
-    @RequestMapping(value="/item/newitem", method = RequestMethod.DELETE)
+    @RequestMapping(value="/item/deleteitem", method = RequestMethod.DELETE)
     public void deleteItem(@RequestBody Item item) throws Exception {
         easyInventoryService.deleteItem(item);
     }
