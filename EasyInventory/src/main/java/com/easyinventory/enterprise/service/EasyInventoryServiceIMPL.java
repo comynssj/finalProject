@@ -5,6 +5,8 @@ import com.easyinventory.enterprise.dao.ItemRepository;
 import com.easyinventory.enterprise.dto.Category;
 import com.easyinventory.enterprise.dto.Item;
 import javassist.NotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +15,11 @@ import java.util.List;
 @Service
 public class EasyInventoryServiceIMPL implements EasyInventoryService{
 
-    ItemRepository itemRepository;
+    private ItemRepository itemRepository;
 
-    CategoryRepository categoryRepository;
+    private CategoryRepository categoryRepository;
+
+    private Logger log = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     public EasyInventoryServiceIMPL(CategoryRepository categoryRepository, ItemRepository itemRepository) {
@@ -30,7 +34,14 @@ public class EasyInventoryServiceIMPL implements EasyInventoryService{
      */
     @Override
     public Category saveCategory(Category category) throws Exception {
-        return categoryRepository.save(category);
+        try {
+            log.info(category + "was saved");
+            return categoryRepository.save(category);
+        }
+        catch (Exception e) {
+            log.error("Unhandled exception: " + e.getMessage());
+            return null;
+        }
     }
 
     /**
@@ -41,7 +52,13 @@ public class EasyInventoryServiceIMPL implements EasyInventoryService{
     @Override
     public void deleteCategory(Category category) throws Exception {
         int categoryId = category.getCategoryId();
-        categoryRepository.deleteCategoryByCategoryId(categoryId);
+        try {
+            categoryRepository.deleteCategoryByCategoryId(categoryId);
+            log.info("Deleted category by ID: " + categoryId);
+        }
+        catch (Exception e) {
+            log.error("Unhandled exception: " + e.getMessage());
+        }
     }
 
     /**
@@ -51,7 +68,13 @@ public class EasyInventoryServiceIMPL implements EasyInventoryService{
      */
     @Override
     public Category getCategoryByCategoryId(int id) throws Exception {
-        return categoryRepository.getCategoryByCategoryId(id);
+        try {
+            return categoryRepository.getCategoryByCategoryId(id);
+        } catch (Exception e) {
+            log.error("Unhandled exception: " + e.getMessage());
+            return null;
+        }
+
     }
 
     /**
@@ -69,7 +92,14 @@ public class EasyInventoryServiceIMPL implements EasyInventoryService{
      */
     @Override
     public Item saveItem(Item item) throws Exception {
-        return itemRepository.save(item);
+        try {
+            log.info("Saved item: " + item);
+            return itemRepository.save(item);
+        } catch (Exception e) {
+            log.error("Unhandled exception: " + e.getMessage());
+            return null;
+        }
+
     }
 
 
@@ -80,7 +110,12 @@ public class EasyInventoryServiceIMPL implements EasyInventoryService{
      */
     @Override
     public void deleteItem(Item item) throws Exception {
-        itemRepository.deleteByItemIdAndAndCategoryId(item.getItemId(), item.getCategoryId());
+        try {
+            itemRepository.deleteByItemIdAndAndCategoryId(item.getItemId(), item.getCategoryId());
+            log.info("Item deleted by ItemID and CategoryID: ItemID " + item.getItemId() + " CategoryID: " + item.getCategoryId());
+        } catch (Exception e) {
+            log.error("Unhandled exception: " + e.getMessage());
+        }
     }
 
     /**

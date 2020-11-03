@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class EnterpriseApplicationTests {
 
     @Autowired
-    EasyInventoryService easyInventoryService;
+    private EasyInventoryService easyInventoryService;
     @Test
     void contextLoads() {
     }
@@ -38,6 +38,7 @@ class EnterpriseApplicationTests {
 
     @Test
     void verifyItems(){
+
         if(easyInventoryService.getAllItems() !=null){
             assert true;
         }else{

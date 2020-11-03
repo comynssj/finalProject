@@ -21,7 +21,7 @@ import java.util.List;
 public class HTMLController {
 
     @Autowired
-    EasyInventoryService easyInventoryService;
+    private EasyInventoryService easyInventoryService;
 
     @RequestMapping(value="/")
     public String index(){

@@ -18,16 +18,16 @@ import java.util.List;
 public class EasyInventoryController {
 
     @Autowired
-    EasyInventoryService easyInventoryService;
+    private EasyInventoryService easyInventoryService;
     //Endpoints for the categories
 
     //Retrieves all the categories from the database
-    @RequestMapping(value="/category/all", method = RequestMethod.GET)
+    @GetMapping("/category/all")
     public List<Category> getAllCategories(Model model){
         return easyInventoryService.getAllCategories();
     }
 
-    @RequestMapping(value="/category/{id}", method = RequestMethod.GET)
+    @GetMapping("/category/{id}")
     public Category getCategoryById(@PathVariable int id, Model model) throws Exception {
         Category category = easyInventoryService.getCategoryByCategoryId(id);
         model.addAttribute("singleCategory", category);
@@ -35,13 +35,13 @@ public class EasyInventoryController {
     }
 
     //Adds a new value to the category table
-    @RequestMapping(value="/category/newcategory", method = RequestMethod.POST)
+    @PostMapping("/category/newcategory")
     public Category addCategory(@RequestBody Category category) throws Exception {
         return easyInventoryService.saveCategory(category);
     }
 
     //Deletes a category from the table
-    @RequestMapping(value="/category/deletecategory", method = RequestMethod.DELETE)
+    @DeleteMapping("/category/deletecategory")
     public void deleteCategory(@RequestBody Category category) throws Exception {
         easyInventoryService.deleteCategory(category);
     }
@@ -49,14 +49,14 @@ public class EasyInventoryController {
     //Endpoints for the Items
 
     //Retrieves all the items from the database
-    @RequestMapping(value="/item/all", method = RequestMethod.GET)
+    @GetMapping("/item/all")
     public List<Item> getAllItems(){
         List<Item> itemList = easyInventoryService.getAllItems();
         return itemList;
     }
 
     //Retrieves all the items from the database by category id
-    @RequestMapping(value="/item/{id}", method = RequestMethod.GET)
+    @GetMapping("/item/{id}")
     public List<Item> getItemsByCategory(@PathVariable int id){
         List<Item> itemList = easyInventoryService.getItemsByCategory(id);
         return itemList;
@@ -71,13 +71,13 @@ public class EasyInventoryController {
     }
 
     //Adds a new value to the item table
-    @RequestMapping(value="/item/newitem", method = RequestMethod.POST)
+    @PostMapping("/item/newitem")
     public Item addItem(@RequestBody Item item) throws Exception {
         return easyInventoryService.saveItem(item);
     }
 
     //Deletes a new value to the item table
-    @RequestMapping(value="/item/deleteitem", method = RequestMethod.DELETE)
+    @DeleteMapping("/item/deleteitem")
     public void deleteItem(@RequestBody Item item) throws Exception {
         easyInventoryService.deleteItem(item);
     }
