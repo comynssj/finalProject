@@ -10,7 +10,7 @@ Landing Page/After hitting the plus button below your bottom category
 
 [Layout 1](https://github.com/comynssj/finalProject/issues/7)
 
-The view of the category with the ability to edit the name. It displays the how many different items have been entered along with how many total there are.
+The view of the category with the ability to edit the name. It displays how many different items have been entered along with how many total there are.
 
 [Layout 2](https://github.com/comynssj/finalProject/issues/7)
 	
@@ -104,7 +104,74 @@ Product Owner/Scrum Master/DevOps/GitHub Administrator: Spencer Comyns
 Will be conducted every Wednesday at 4pm on Microsoft Teams
 
 
-####
+#### Testing the Backend
+Download postman client to use the post/delete requests.
+
+https://www.postman.com/downloads/
+
+Run the application.
+
+-Returns all categories 
+*#get*
+http://localhost:8080/category/all
+
+-Returns category by Id 
+*#get*
+http://localhost:8080/category/{id}
+
+-Adds a new category 
+*#post*
+http://localhost:8080/category/newcategory
+	*{
+	"categoryId": int,
+	"categoryName": ""
+	}*
+
+-Deletes a category 
+*#delete*
+http://localhost:8080/category/deletecategory
+	*{
+	"categoryId": int,
+	"categoryName": ""
+	}*
+
+-Returns all items 
+*#get*
+http://localhost:8080/item/all
+
+-Returns items by category id 
+*#get*
+http://localhost:8080/item/{id}
+
+-Returns item by item id 
+*#get*
+http://localhost:8080/item/item/{id}
+
+-Adds a new item 
+*#post*
+http://localhost:8080/item/newitem
+	*{
+	"itemId": int,
+	"categoryId": int,
+	"itemName": "",
+	"itemQuantity": int,
+	"itemNotes": ""
+	}*
+
+-deletes an item 
+*#delete*
+http://localhost:8080/item/deleteitem
+	*{
+	"itemId": int,
+	"categoryId": int,
+	"itemName": "",
+	"itemQuantity": int,
+	"itemNotes": ""
+	}*
+
+
+
+
 
 
 
