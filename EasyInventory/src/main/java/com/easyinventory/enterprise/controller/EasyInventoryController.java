@@ -3,7 +3,10 @@ package com.easyinventory.enterprise.controller;
 import com.easyinventory.enterprise.dto.Category;
 import com.easyinventory.enterprise.dto.Item;
 import com.easyinventory.enterprise.service.EasyInventoryService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,13 +24,15 @@ public class EasyInventoryController {
     EasyInventoryService easyInventoryService;
     //Endpoints for the categories
 
+    Logger log = LoggerFactory.getLogger(this.getClass());
+
     //Retrieves all the categories from the database
-    @RequestMapping(value="/category/all", method = RequestMethod.GET)
+    @GetMapping(value="/category/all")
     public List<Category> getAllCategories(Model model){
         return easyInventoryService.getAllCategories();
     }
 
-    @RequestMapping(value="/category/{id}", method = RequestMethod.GET)
+    @GetMapping(value="/category/{id}")
     public Category getCategoryById(@PathVariable int id, Model model) throws Exception {
         Category category = easyInventoryService.getCategoryByCategoryId(id);
         model.addAttribute("singleCategory", category);
@@ -35,35 +40,37 @@ public class EasyInventoryController {
     }
 
     //Adds a new value to the category table
-    @RequestMapping(value="/category/newcategory", method = RequestMethod.POST)
+    @PostMapping(value="/category/newcategory")
     public Category addCategory(@RequestBody Category category) throws Exception {
         return easyInventoryService.saveCategory(category);
     }
 
     //Deletes a category from the table
-    @RequestMapping(value="/category/deletecategory", method = RequestMethod.DELETE)
+    @DeleteMapping(value="/category/deletecategory")
     public void deleteCategory(@RequestBody Category category) throws Exception {
+
+        log.debug("Entering delete category endpoint");
+
         easyInventoryService.deleteCategory(category);
+        log.info("Category " + category + "was deleted");
     }
 
     //Endpoints for the Items
 
     //Retrieves all the items from the database
-    @RequestMapping(value="/item/all", method = RequestMethod.GET)
+    @GetMapping(value="/item/all")
     public List<Item> getAllItems(){
-        List<Item> itemList = easyInventoryService.getAllItems();
-        return itemList;
+        return easyInventoryService.getAllItems();
     }
 
     //Retrieves all the items from the database by category id
-    @RequestMapping(value="/item/{id}", method = RequestMethod.GET)
+    @GetMapping(value="/item/{id}")
     public List<Item> getItemsByCategory(@PathVariable int id){
-        List<Item> itemList = easyInventoryService.getItemsByCategory(id);
-        return itemList;
+        return easyInventoryService.getItemsByCategory(id);
     }
 
     //Retrieves an item by item id
-    @RequestMapping(value="/item/item/{id}")
+    @GetMapping(value="/item/item/{id}")
     public Item getItemByItemId(@PathVariable int id, Model model){
         Item item = easyInventoryService.findItemByItemId(id);
         model.addAttribute("selectedItem", item);
@@ -71,14 +78,18 @@ public class EasyInventoryController {
     }
 
     //Adds a new value to the item table
-    @RequestMapping(value="/item/newitem", method = RequestMethod.POST)
+    @PostMapping(value="/item/newitem")
     public Item addItem(@RequestBody Item item) throws Exception {
         return easyInventoryService.saveItem(item);
     }
 
     //Deletes a new value to the item table
-    @RequestMapping(value="/item/deleteitem", method = RequestMethod.DELETE)
+    @DeleteMapping (value="/item/deleteitem")
     public void deleteItem(@RequestBody Item item) throws Exception {
+
+        log.debug("Entering delete category endpoint");
+
         easyInventoryService.deleteItem(item);
+        log.info("Item " + item + "was deleted");
     }
 }
