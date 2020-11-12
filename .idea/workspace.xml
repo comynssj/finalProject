@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3efda803-fcc6-4a9a-a2e8-3ad3e05e5261" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyInventory/src/main/resources/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/EasyInventory/src/main/resources/templates/inventory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyInventory/src/main/resources/static/css/inventory.css" beforeDir="false" afterPath="$PROJECT_DIR$/EasyInventory/src/main/resources/static/css/inventory.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyInventory/src/main/resources/static/css/welcome.css" beforeDir="false" afterPath="$PROJECT_DIR$/EasyInventory/src/main/resources/static/css/welcome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyInventory/src/main/resources/templates/start.html" beforeDir="false" afterPath="$PROJECT_DIR$/EasyInventory/src/main/resources/templates/start.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +23,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -66,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604699773038</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="addition of new item input textbox">
+      <created>1604764147007</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604764147007</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -75,13 +86,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Main screen for UI" />
     <MESSAGE value="added some basic bootstrap elements for the UI design. More updates soon to come." />
-    <option name="LAST_COMMIT_MESSAGE" value="added some basic bootstrap elements for the UI design. More updates soon to come." />
+    <MESSAGE value="addition of new item input textbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="addition of new item input textbox" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604530846625">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604768062952">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1604530846625" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1604768062952" />
     <state x="520" y="215" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601862456990">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -90,30 +102,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="516" y="259" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1604499243119" />
-    <state x="296" y="7" key="CommitChangelistDialog2" timestamp="1604699772509">
+    <state x="257" y="0" key="CommitChangelistDialog2" timestamp="1604764146238">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="296" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604699772509" />
-    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1604699979579">
+    <state x="257" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604764146238" />
+    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1604768146053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604699979579" />
+    <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604768146053" />
     <state x="481" y="128" key="MultipleFileMergeDialog" timestamp="1604499176454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="481" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1604499176454" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1604699835207">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1604764206598">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604699835207" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1604699933255">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1604764206598" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1604766890632">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1604699933255" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604428243557">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1604766890632" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605189396962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1604428243557" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605189396962" />
     <state x="460" y="204" key="git4idea.merge.GitPullDialog" timestamp="1604499165747">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>EasyInventory</title>
-    <link th:href = "@{/css/welcome.css}" rel="stylesheet">
+    <link th:href = "@{/static/css/welcome.css}" rel="stylesheet">
 </head>
 <body>
 <div id="header">
@@ -18,8 +18,38 @@
 <div id="welcome">
     <p>Easy inventory is an application aimed to make it as easy as possible for an individual to keep track of items they're selling or storing.</p>
 </div>
+
+<ul class="list-group">
+    <li class="list-group-item">Activities</li>
+    <li class="list-group-item">Movies</li>
+    <li class="list-group-item">Recipies</li>
+</ul>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Category</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+
+<br/>
+
+<div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">New Category</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+</div>
+<div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-secondary">Delete</button>
+    <button type="button" class="btn btn-secondary">Save</button>
+</div>
+
+
+
+
 </body>
 <footer>
-    <p>Footer</p>
+    <p>EasyInventory</p>
 </footer>
 </html>

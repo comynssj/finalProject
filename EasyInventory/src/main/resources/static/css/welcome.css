@@ -41,3 +41,6 @@ footer{
     padding: 30px;
     margin: 0px;
 }
+ul li{
+    list-style-type: none;
+}
