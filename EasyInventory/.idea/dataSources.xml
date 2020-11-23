@@ -5,7 +5,7 @@
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/easyinventory</jdbc-url>
+      <jdbc-url>jdbc:mysql://database-1.cij6bfwps7cz.us-east-2.rds.amazonaws.com:3306/easyinventory</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="amazondb" uuid="9b3c6594-5dde-4303-bcb2-407d3323a389">
       <driver-ref>mysql.8</driver-ref>

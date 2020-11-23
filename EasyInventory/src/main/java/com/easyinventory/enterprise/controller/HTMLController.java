@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.easyinventory.enterprise.controller.EasyInventoryController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,7 +20,7 @@ import java.util.List;
  */
 @Controller
 public class HTMLController {
-
+    List<Item> itemList = new ArrayList<>();
     @Autowired
     EasyInventoryService easyInventoryService;
 
@@ -38,12 +39,28 @@ public class HTMLController {
 
     @RequestMapping(value="/inventory/{id}")
     public String inventoryCategory(@PathVariable int id, Model model){
-        List<Item> itemList = easyInventoryService.getItemsByCategory(id);
+        System.out.println(id);
+        this.itemList.clear();
+        this.itemList = easyInventoryService.getItemsByCategory(id);
+        List<Category> categoryList = easyInventoryService.getAllCategories();
+        //Adds the category list to the html template under id 'categories'
+        model.addAttribute("categories",categoryList);
         //Adds the item list to the html template under the id 'items'
-        model.addAttribute("items", itemList);
+        model.addAttribute("items", this.itemList);
 
         //The HTML page needs to be created but im not sure if it will be a new page or if it will be a window covering the main view.
-        return "";
+        return "inventory";
+    }
+
+    //Retrieves an item by item id
+    @RequestMapping(value="/item/item/{id}")
+    public String getItemByItemId(@PathVariable int id, Model model){
+        Item item = easyInventoryService.findItemByItemId(id);
+        List<Category> categoryList = easyInventoryService.getAllCategories();
+        //Adds the category list to the html template under id 'categories'
+        model.addAttribute("categories",categoryList);
+        model.addAttribute("selectedItem", item);
+        return "edit";
     }
 
 

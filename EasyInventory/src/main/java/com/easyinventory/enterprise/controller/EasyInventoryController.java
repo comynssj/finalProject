@@ -62,14 +62,6 @@ public class EasyInventoryController {
         return itemList;
     }
 
-    //Retrieves an item by item id
-    @RequestMapping(value="/item/item/{id}")
-    public Item getItemByItemId(@PathVariable int id, Model model){
-        Item item = easyInventoryService.findItemByItemId(id);
-        model.addAttribute("selectedItem", item);
-        return item;
-    }
-
     //Adds a new value to the item table
     @RequestMapping(value="/item/newitem", method = RequestMethod.POST)
     public Item addItem(@RequestBody Item item) throws Exception {

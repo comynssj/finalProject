@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3efda803-fcc6-4a9a-a2e8-3ad3e05e5261" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EasyInventory/src/main/resources/templates/inventory.html" beforeDir="false" afterPath="$PROJECT_DIR$/EasyInventory/src/main/resources/templates/inventory.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyInventory/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EasyInventory/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyInventory/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EasyInventory/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyInventory/.idea/dataSources/4b82d227-9d99-4110-8d5f-db889d3a7b74.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyInventory/.idea/dataSources/4b82d227-9d99-4110-8d5f-db889d3a7b74/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyInventory/.idea/dataSources/7bb637d1-de8f-4772-9625-5407c1c081c2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/EasyInventory/.idea/dataSources/7bb637d1-de8f-4772-9625-5407c1c081c2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyInventory/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/EasyInventory/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EasyInventory/target/classes/com/easyinventory/enterprise/controller/EasyInventoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/EasyInventory/target/classes/com/easyinventory/enterprise/controller/EasyInventoryController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,15 +24,18 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/EasyInventory" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -37,6 +46,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601836678541</updated>
+      <workItem from="1605042351687" duration="30000" />
+      <workItem from="1606071637739" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="Main screen for UI">
       <created>1601862498862</created>
@@ -69,6 +80,9 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
@@ -94,9 +108,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="296" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1604699772509" />
-    <state x="549" y="154" key="FileChooserDialogImpl" timestamp="1604699979579">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="686" y="195" key="FileChooserDialogImpl" timestamp="1606071645230">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="686" y="195" key="FileChooserDialogImpl/-3840.0.1280.693/1920.0.1920.1080/-1920.0.1920.1080/0.0.1920.1040@0.0.1920.1040" timestamp="1606071645230" />
+    <state x="2606" y="202" key="FileChooserDialogImpl/-3840.0.1280.693/1920.0.1920.1080/-1920.0.1920.1080/0.0.1920.1040@1920.0.1920.1080" timestamp="1605042381037" />
     <state x="549" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604699979579" />
     <state x="481" y="128" key="MultipleFileMergeDialog" timestamp="1604499176454">
       <screen x="0" y="0" width="1536" height="824" />
